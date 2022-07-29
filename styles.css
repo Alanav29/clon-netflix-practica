@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+:root{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+html {
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Serie estelar */
+.serie_estelar{
+    width: 100%;
+    height: 50vw;
+    margin: 0%;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+}
+
+.contenedor_descripcion{
+    width: 35%;
+    height: 100%;
+    margin-bottom: 5vw;
+    margin-left: 4%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+body img {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50vw;
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.serie_estelar_bloque_uno{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 6vw;
+    margin-bottom: 2%;
+}
+
+.serie_estelar_bloque_dos{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 2vw;
+    margin-bottom: 2%;
+    margin-top: 0;
+}
+
+.serie_estelar_bloque_tres{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+    font-weight: 400;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.contenedor_botones{
+display: flex;
+flex-flow: row wrap;
+}
+
+.boton_reproducir{
+    background-color: white;
+    border-radius: .2vw;
+    width: 35%;
+    height: 3vw;
+    color: black;
+    font-size: 1.2vw;
+    font-weight: 500;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton_reproducir:hover {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.9251050762101716) 100%, rgba(255,255,255,0.9251050762101716) 100%);
+}
+
+.boton_informacion{
+    background: rgb(140,140,140);
+    background: linear-gradient(180deg, rgba(140,140,140,0.6730042358740371) 100%, rgba(140,140,140,1) 100%);
+    border-radius: .2vw;
+    width: 42%;
+    height: 3vw;
+    margin-left: 2%;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton_informacion:hover {
+    background: rgb(140,140,140);
+    background: linear-gradient(180deg, rgba(140,140,140,0.45451684091605393) 100%, rgba(140,140,140,1) 100%);
+}
+
+
+
+.icono_play{
+    content: url(./imagenes/iconoplay.svg);
+    height: 1.8vw;
+    margin-right: 1vw;
+}
+
+.icono_info{
+    content: url(./imagenes/iconoinfo.svg);
+    height: 2vw;
+    margin-right: .5vw;
+}
+
+/* Header */
+
+.contenedor_header{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 53%, rgba(0,0,0,0) 100%);
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 4vw;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.second_nav{
+    display: none;
+    position: fixed;
+    z-index: 4;
+}
+
+.derecha_header{
+    margin-left: auto;
+    margin-right: 4vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.izquierda_header{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.logo_header{
+    content: url(./imagenes/logonetflix.svg);
+    object-fit: contain;
+    height: 1.7vw;
+    margin-left: 4vw;
+    margin-right: 3vw;
+}
+
+.lupa{
+    content: url(./imagenes/iconolupa.svg);
+    object-fit: contain;
+    height: 1.7vw;
+    margin-right: 2vw;
+}
+
+.notificaciones{
+    content: url(./imagenes/icononotificacion.svg) ;
+    object-fit: contain;
+    height: 1.7vw;
+    margin-right: 2vw;
+}
+
+.ninos{
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 2vw;
+}
+
+.usuario{
+    content: url(./imagenes/iconousuario.svg) ;
+    object-fit: contain;
+    height: 1.7vw;
+}
+
+.menu{
+    margin-right: 1.1vw;
+}
+
+/* Cintas */
+
+.cintas{
+    position: absolute;
+    z-index: 3;
+    width: 96vw;
+    margin-top: 38%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.categoria_cinta{
+    margin-top: 1vw;
+    margin-left: 4vw;
+    margin-bottom: 1vw;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.contenedor_cinta{
+    display: flex;
+    overflow: auto;
+}
+
+.cinta{
+    position: relative;
+    z-index: 3;
+    margin-left: 4%;
+    display: flex;
+}
+
+/* Series */
+
+.serie{
+    width: 20vw;
+    margin: .5vw;
+    margin-right: 0.5vw;
+    object-fit: contain;
+}
+
+.serie_uno{
+    content: url(./imagenes/serie1.jpg);
+    width: 100%;
+    
+}
+
+.serie_dos{
+    content: url(./imagenes/serie2.jpg);
+    width: 100%;
+}
+
+.serie_tres{
+    content: url(./imagenes/serie3.jpg);
+    width: 100%;
+}
+
+.serie_cuatro{
+    content: url(./imagenes/serie4.jpg);
+    width: 100%;
+}
+
+.serie_cinco{
+    content: url(./imagenes/serie5.jpg);
+    width: 100%;
+}
+
+.serie_seis{
+    content: url(./imagenes/serie6.jpg);
+    width: 100%;
+}
+
+@media(max-width: 700px){
+    .contenedor_header{
+        display: none;
+    }
+    .second_nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: black;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 100%, rgba(0,0,0,0) 100%);
+    }
+
+    .izquierda_second_nav{
+        display: flex;
+        align-items: center;
+    }
+
+    .icono_second_nav{
+        content: url(./imagenes/iconosegundonav.svg);
+        height: 20px;
+    }
+
+    .logo_header{
+        height: 20px;
+    }
+
+    .finder{
+        width: 200px;
+        height: 30px;
+        border: 1px solid white;
+        color: white;
+        outline: 1px white;
+        background-color: transparent;
+    }
+
+    img {
+        display: none;
+    }
+    .serie_estelar{
+        display: none;
+    }
+    .cintas{
+        margin-top: 5vw;
+    }
+    .categoria_cinta{
+        margin-top: 2.5vw;
+    }
+    .serie{
+        width: 40vw;
+    }
+}
